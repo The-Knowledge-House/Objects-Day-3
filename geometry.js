@@ -17,20 +17,30 @@ class Rectangle {
    * @return {boolean} true if the rectangle is a square
    */
   isSquare() {
-    
+    if (this.length === this.width) {
+      return true;
+    } else { 
+      return false;
+    }
   }
 
   /**
    * calculates the area of the rectangle
    * @return {number} the area of the rectangle
    */
-  area() {}
+  area() {
+    let area = this.length * this.width;
+    return area;
+  }
 
   /**
    * calculates the perimeter of the rectangle.
    * @returns {number} the perimeter of the rectangle
    */
-  perimeter() {}
+  perimeter() {
+    let perimeter = (this.length) * 2  + (this.width) * 2;
+    return perimeter
+  }
 }
 
 /**
@@ -52,26 +62,47 @@ class Triangle {
    * @returns {boolean} true if the triangle is equilateral
    * @see http://en.wikipedia.org/wiki/Equilateral_triangle
    */
-  isEquilateral() {}
+  isEquilateral() {
+    if (this.sideA === this.sideB && this.sideB === this.sideC && this.sideA === this.sideC) {
+      return true
+    } else { 
+      return false
+    }
+  }
 
   /**
    * @returns {boolean} true if the triangle is isosceles
    * @see http://en.wikipedia.org/wiki/Isosceles_triangle#By_relative_lengths_of_sides
    */
-  isIsosceles() {}
+  isIsosceles() {
+    if (this.sideA === this.sideB ||  this.sideB === this.sideC || this.sideA === this.sideC) {
+      return true
+    } else { 
+      return false
+    }
+  }
 
   /**
    * @returns {boolean} true if the triangle is obtuse
    * @see http://en.wikipedia.org/wiki/Isosceles_triangle#By_internal_angles
    */
-  isObtuse() {}
-
+  isObtuse() {
+    if (this.sideA !== this.sideB && this.sideB !== this.sideC && this.sideA !== this.sideC) {
+      return true;
+    } else { 
+      return false;
+    }
+  }
+  
   /**
    * calculates the area of the Triangle
    * @returns {number} the area of the Triangle
    * @see http://en.wikipedia.org/wiki/Heron%27s_formula
    */
-  area() {}
+  area() {
+    let area = (this.sideA + this.sideB + this.sideC) / 2;
+    return area;
+  }
 }
 
 /**
