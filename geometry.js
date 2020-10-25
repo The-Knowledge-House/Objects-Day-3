@@ -124,10 +124,7 @@ class LineSegment {
    * @returns {number} the length of the line segment
    * @see http://en.wikipedia.org/wiki/Pythagorean_theorem
    */
-  length() {
-    let calculateLineSeg = Math.sqrt((this.end.x - this.start.y) ** 2);
-    return calculateLineSeg;
-  }
+  length() {}
 }
 
 // NOTE: DO NOT REMOVE OR ALTER
